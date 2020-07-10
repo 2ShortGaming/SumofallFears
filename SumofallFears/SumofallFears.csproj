@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code.html" />
+    <Content Include="Images\SumofallFears\android-chrome-192x192.png" />
+    <Content Include="Images\SumofallFears\android-chrome-512x512.png" />
+    <Content Include="Images\SumofallFears\apple-touch-icon.png" />
+    <Content Include="Images\SumofallFears\favicon-16x16.png" />
+    <Content Include="Images\SumofallFears\favicon-32x32.png" />
+    <Content Include="Images\SumofallFears\favicon.ico" />
     <Content Include="Index.html" />
     <Content Include="Solve.html" />
     <Content Include="Web.config" />
@@ -76,6 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\SumofallFears\site.webmanifest" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
