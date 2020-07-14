@@ -77,27 +77,33 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container" style="font-family:'Comic Sans MS'; color:snow">
-        <div class="row">
+    <div class="container">
+        <div class="row" style="font-family:'Comic Sans MS'; color:snow">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Sum of all Fears Exercise</h1>
-                <p class="lead">This page will display your JS exercise</p>
+                <p class="lead">The Challenge</p>
                 <ul class="list-unstyled">
-                    <li>Challenge</li>
+                    <li>Please enter numbers into each box.</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <input class="col" id="soafK" placeholder="K Value"/>
-            <input class="col" id="soafIn1" placeholder="Enter Number"/>
-            <input class="col" id="soafIn2" placeholder="Enter Number"/>
-            <input class="col" id="soafIn3" placeholder="Enter Number"/>
-            <input class="col" id="soafIn4" placeholder="Enter Number"/>
-            <input class="col" id="soafIn5" placeholder="Enter Number"/>
+            <input class="col" id="soafIn1" style="margin-left:10px" placeholder="Enter Number"/>
+            <input class="col" id="soafIn2" style="margin-left:10px" placeholder="Enter Number"/>
+            <input class="col" id="soafIn3" style="margin-left:10px" placeholder="Enter Number"/>
+            <input class="col" id="soafIn4" style="margin-left:10px" placeholder="Enter Number"/>
+            <input class="col" id="soafIn5" style="margin-left:10px" placeholder="Enter Number"/>
         </div>
-        <button id="soafBtn" class="btn-dark" style="border:double">Sum the Fears</button>
-        <div class="row">
-            <p id="soafOut"></p>
+        <div class="row" style="font-family:'Comic Sans MS'; color:snow; padding-left:7em">
+            <div class="col-3"></div>
+            <button id="soafBtn" class="btn btn-dark col-2" style="border:double; margin-top:20px">Sum the Fears</button>
+            <button id="btnClear" class="btn btn-dark col-2" style="border:double; margin-left:10px; margin-top:20px" double">Clear</button>
+            </div>
+        <br />
+
+        <div class="row h4 text-center" style="font-family:'Comic Sans MS'; color:snow">
+          <p id="soafOut"></p>
           
         </div>
     </div>
@@ -107,29 +113,17 @@
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
-        //$('#soafBtn').on('click', function () {
-        //    let soafArray = [10, 15, 3, 7];
-        //    let k = Number($("#soafIn1").val());
-        //    for (let loop = 0; loop < soafArray.length; loop++) {
-        //        let checkNum = k - soafArray[loop];
-        //        for (let innerLoop = loop + 1; innerLoop < soafArray.length - 1; innerLoop++) {
-        //            let innerCheck = soafArray[innerLoop]
-        //            if (checkNum == soafArray[innerLoop]) {
-        //                $("#soafOutput").text(`K value found! ${soafArray[loop]} + ${soafArray[innerLoop]} = ${k}!`)
-        //            return;
-        //            }
-        //        }
-        //    }
-
-        //});
-        $("#soafBtn").on('click', function () {
+        // Data from user//
+        $("#soafBtn").on("click", function () {
 
             let k = parseInt($("#soafK").val());
             let num1 = parseInt($("#soafIn1").val());
-            let num2 = parseInt($("#soafIn1").val());
-            let num3 = parseInt($("#soafIn1").val());
-            let num4 = parseInt($("#soafIn1").val());
-            let num5 = parseInt($("#soafIn1").val());
+            let num2 = parseInt($("#soafIn2").val());
+            let num3 = parseInt($("#soafIn3").val());
+            let num4 = parseInt($("#soafIn4").val());
+            let num5 = parseInt($("#soafIn5").val());
+
+            // Array with the user input//
 
             let array = new Array();
             array.push(num1);
@@ -137,27 +131,32 @@
             array.push(num3);
             array.push(num4);
             array.push(num5);
-
-            var message = "";
+            // perform the algorithm//
+            let message = "";
 
             for (let index = 0; index < array.length - 1; index++) {
+                //--any num larger than K will be ignored//
                 if (array[index] > k)
                     continue;
 
                 let solution = k - array[index];
 
                 if (array.indexOf(solution, index + 1) > -1) {
-                    message = `A solution was found for a K value of ${k}.`;
+                    message = `A solution was found for a "K" value of ${k}.`;
                     break;
                 }
                 else {
-                    message = `No solution for a K value of ${k} was found.`;
+                    message = `No solution for a "K" value of ${k} was found.`;
                 }
-
-                index++
-                $("#soafOut").text(message);
             }
-        }
+            // print result to user//
+            $("#soafOut").text(message);
+        });
+        $("#btnClear").on("click", function () {
+            $("#soafK, #soafIn1,#soafIn2, #soafIn3, #soafIn4, #soafIn5").val("");
+            $("#soafOut").text("");
+        })
+               
     </script>
 </body>
 
