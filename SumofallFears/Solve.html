@@ -88,23 +88,23 @@
             </div>
         </div>
         <div class="row">
-            <input class="col" id="soafK" placeholder="K Value"/>
-            <input class="col" id="soafIn1" style="margin-left:10px" placeholder="Enter Number"/>
-            <input class="col" id="soafIn2" style="margin-left:10px" placeholder="Enter Number"/>
-            <input class="col" id="soafIn3" style="margin-left:10px" placeholder="Enter Number"/>
-            <input class="col" id="soafIn4" style="margin-left:10px" placeholder="Enter Number"/>
-            <input class="col" id="soafIn5" style="margin-left:10px" placeholder="Enter Number"/>
+            <input class="col" id="soafK" placeholder="K Value" />
+            <input class="col" id="soafIn1" style="margin-left:10px" placeholder="Enter Number" />
+            <input class="col" id="soafIn2" style="margin-left:10px" placeholder="Enter Number" />
+            <input class="col" id="soafIn3" style="margin-left:10px" placeholder="Enter Number" />
+            <input class="col" id="soafIn4" style="margin-left:10px" placeholder="Enter Number" />
+            <input class="col" id="soafIn5" style="margin-left:10px" placeholder="Enter Number" />
         </div>
-        <div class="row" style="font-family:'Comic Sans MS'; color:snow; padding-left:7em">
+        <div class="row" style="font-family:'Comic Sans MS'; color:snow">
             <div class="col-3"></div>
             <button id="soafBtn" class="btn btn-dark col-2" style="border:double; margin-top:20px">Sum the Fears</button>
             <button id="btnClear" class="btn btn-dark col-2" style="border:double; margin-left:10px; margin-top:20px" double">Clear</button>
-            </div>
+        </div>
         <br />
 
         <div class="row h4 text-center" style="font-family:'Comic Sans MS'; color:snow">
-          <p id="soafOut"></p>
-          
+            <p id="soafOut"></p>
+
         </div>
     </div>
 
@@ -112,52 +112,9 @@
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script>
-        // Data from user//
-        $("#soafBtn").on("click", function () {
-
-            let k = parseInt($("#soafK").val());
-            let num1 = parseInt($("#soafIn1").val());
-            let num2 = parseInt($("#soafIn2").val());
-            let num3 = parseInt($("#soafIn3").val());
-            let num4 = parseInt($("#soafIn4").val());
-            let num5 = parseInt($("#soafIn5").val());
-
-            // Array with the user input//
-
-            let array = new Array();
-            array.push(num1);
-            array.push(num2);
-            array.push(num3);
-            array.push(num4);
-            array.push(num5);
-            // perform the algorithm//
-            let message = "";
-
-            for (let index = 0; index < array.length - 1; index++) {
-                //--any num larger than K will be ignored//
-                if (array[index] > k)
-                    continue;
-
-                let solution = k - array[index];
-
-                if (array.indexOf(solution, index + 1) > -1) {
-                    message = `A solution was found for a "K" value of ${k}.`;
-                    break;
-                }
-                else {
-                    message = `No solution for a "K" value of ${k} was found.`;
-                }
-            }
-            // print result to user//
-            $("#soafOut").text(message);
-        });
-        $("#btnClear").on("click", function () {
-            $("#soafK, #soafIn1,#soafIn2, #soafIn3, #soafIn4, #soafIn5").val("");
-            $("#soafOut").text("");
-        })
-               
-    </script>
+    <script src="js/main.js"></script>
+   
+    
 </body>
 
 </html>

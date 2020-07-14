@@ -83,6 +83,7 @@
     <Content Include="Images\SumofallFears\favicon-32x32.png" />
     <Content Include="Images\SumofallFears\favicon.ico" />
     <Content Include="Index.html" />
+    <Content Include="js\main.js" />
     <Content Include="js\prism.js" />
     <Content Include="Solve.html" />
     <Content Include="Web.config" />
