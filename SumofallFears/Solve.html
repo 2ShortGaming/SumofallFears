@@ -123,25 +123,29 @@
 
         //});
         $("#soafBtn").on('click', function () {
+
+            let k = parseInt($("#soafK").val());
             let num1 = parseInt($("#soafIn1").val());
             let num2 = parseInt($("#soafIn1").val());
             let num3 = parseInt($("#soafIn1").val());
             let num4 = parseInt($("#soafIn1").val());
             let num5 = parseInt($("#soafIn1").val());
 
+            let array = new Array();
             array.push(num1);
             array.push(num2);
             array.push(num3);
             array.push(num4);
             array.push(num5);
 
-           
             var message = "";
 
             for (let index = 0; index < array.length - 1; index++) {
-                if (array[number] > k)
+                if (array[index] > k)
                     continue;
+
                 let solution = k - array[index];
+
                 if (array.indexOf(solution, index + 1) > -1) {
                     message = `A solution was found for a K value of ${k}.`;
                     break;
@@ -152,18 +156,9 @@
 
                 index++
                 $("#soafOut").text(message);
-            };
-
-
-
-
-
-
+            }
+        }
     </script>
-
-
-
-
 </body>
 
 </html>
