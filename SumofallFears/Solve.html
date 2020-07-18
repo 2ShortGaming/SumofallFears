@@ -7,13 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="description" content="Free Responsive Animated Portfolio Template" />
+    <meta name="keywords" content="portfolio, template, responsive, bootstrap" />
+    <meta name="developer" content="TemplateOcean">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex">
 
-    <title>Sum of all Fears Challenge</title>
+    <title>Swaney | Sum of all Fears</title>
     <link rel="icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css' id="Open">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Image Slider -->
+    <link rel="stylesheet" href="css/plagin-css/owl.carousel.css">
 
-    
+    <!-- FONT ICONS -->
+    <link rel="stylesheet" href="icons/rik-icons/styles.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    <!--   COUSTOM CSS link  -->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--<link rel="stylesheet" href="css/style.css"/>-->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
     <style>
         body, html {
             height: 100%;
@@ -22,21 +51,57 @@
 
         .bg {
             /* The image used */
-            background-image: url("Images/hexgrey.jpg");
+            background-image: url("Images/hexorg.jpg");
             /* Full height */
             height: 100%;
             /* Center and scale the image nicely */
             background-position: center;
             background-size: cover;
         }
+        .bldgCount {
+            font-weight: 800;
+            font-size: larger;
+        }
+
+        .btnStyle {
+            border: double;
+            color: snow;
+            margin-top: 20px;
+            width: 20%;
+        }
+
+        .txtStyle {
+            color: snow;
+            font-family: 'Comic Sans MS';
+        }
+
+        .overlay-color::before {
+            content: '';
+            position: absolute;
+            background-color: rgba(32, 32, 32, 0.8);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .overlay-color-full {
+            position: relative;
+        }
+
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+        }
     </style>
 
 </head>
 
-<body class="bg">
+<body class="bg overlay-color-full overlay-color">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container" style="font-family:'Comic Sans MS'; color:snow">
             <a class="navbar-brand" href="/Index.html">Sum of all Fears</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,47 +141,98 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav>-->
+    <nav class="navbar navbar-fixed-top main-navbar-top navbar-top-js navbar-home" id="main-navbar-top">
+        <div class="container relative">
+            <div class="navbar-header">
 
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row" style="font-family:'Comic Sans MS'; color:snow">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Sum of all Fears Exercise</h1>
-                <p class="lead">The Challenge</p>
-                <ul class="list-unstyled">
-                    <li>Please enter numbers into each box.</li>
+                <!-- Menu Button show Mobile view -->
+                <button type="button" class="nav-trigger nav-trigger-animate" data-target="#js-navbar-menu">
+                    <span aria-hidden="true" class="icon"></span>
+                </button>
+            </div>
+            <!-- TEMPLATE LOGO LIGHT -->
+            <!--<a class="navbar-brand light-logo btn-scroll" href="#home-section"><img src="images/logo.png" alt="" class="img-responsive"></a>-->
+            <!--<a class="navbar-brand light-logo btn-scroll" href="/Index.html"></a>-->
+            <!--<div class="navbar-collapse-right hidden-xs" style="padding-right:2em">
+                <ul class="nav navbar-left btn-scroll">
+                    <li><a class="btn-nav" href="/Index.html">SUNSET HILLS </a></li>
+
+                </ul>
+            </div>-->
+            <!-- Main Menu List -->
+            <div class="navbar-collapse" id="js-navbar-menu">
+                <ul class="nav navbar-nav ml-auto navbar-right" id="navbar-nav">
+                    <li><a class="btn-nav" href="/Index.html" target="_blank">Home</a></li>
+                    <li><a class="btn-nav" href="/Solve.html" target="_blank">Try It</a></li>
+                    <li><a class="btn-nav" href="/Code.html" target="_blank">Code</a></li>
+                    <li><a class="btn-nav" href="https://github.com/2ShortGaming/SunsetHills" target="_blank">GITHUB</a></li>
+                    <li><a class="btn-nav" href="https://swaney-portfolio-cf-trn.netlify.app" target="_blank">Portfolio</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="row">
-            <input class="col form-control" id="soafK" placeholder="K Value" />
-            <input class="col form-control" id="soafIn1" style="margin-left:10px" placeholder="Enter Number" />
-            <input class="col form-control" id="soafIn2" style="margin-left:10px" placeholder="Enter Number" />
-            <input class="col form-control" id="soafIn3" style="margin-left:10px" placeholder="Enter Number" />
-            <input class="col form-control" id="soafIn4" style="margin-left:10px" placeholder="Enter Number" />
-            <input class="col form-control" id="soafIn5" style="margin-left:10px" placeholder="Enter Number" />
-        </div>
-        <div class="row" style="font-family:'Comic Sans MS'; color:snow">
-            <div class="col-3" style="margin-left:75px"></div>
-            <button id="soafBtn" class="btn btn-dark col-2" style="border:double; margin-top:20px">Sum the Fears</button>
-            <button id="btnClear" class="btn btn-dark col-2" style="border:double; margin-left:10px; margin-top:20px" double">Clear</button>
-        </div>
-        <br />
+            <!-- Right Side Navigation Button-->
+            <div class="dropdown">
+                <div class="navbar-collapse-right">
+                    <ul class="nav navbar-nav ml-auto navbar-right btn-scroll">
+                        <li><a class="nav navbar-nav ml-auto navbar-right btn-nav dropdown-toggle" data-toggle="dropdown">MINI PROJECTS <i class="icon icon-arrow-right"></i></a></li>
 
-        <div class="row h4 text-center" style="font-family:'Comic Sans MS'; color:snow">
-            <p id="soafOut"></p>
-
+                    </ul>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-   
-    
+            <!-- Page Content -->
+            <div class="container">
+                <div class="row" style="color:snow">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="mt-5 animate__animated animate__heartBeat animate__infinite animate__slow">Sum of all Fears Exercise</h1>
+                        <p class="lead">The Challenge</p>
+                        <ul class="list-unstyled">
+                            <li>Please enter numbers into each box.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <input class="col form-control" id="soafK" placeholder="K Value" />
+                    <input class="col form-control" id="soafIn1" style="margin-left:10px" placeholder="Enter Number" />
+                    <input class="col form-control" id="soafIn2" style="margin-left:10px" placeholder="Enter Number" />
+                    <input class="col form-control" id="soafIn3" style="margin-left:10px" placeholder="Enter Number" />
+                    <input class="col form-control" id="soafIn4" style="margin-left:10px" placeholder="Enter Number" />
+                    <input class="col form-control" id="soafIn5" style="margin-left:10px" placeholder="Enter Number" />
+                </div>
+                <div class="row" style="font-family:'Comic Sans MS'; color:snow">
+                    <div class="col-3" style="margin-left:75px"></div>
+                    <button id="soafBtn" class="btn btn-dark col-2" style="border:double; margin-top:20px">Sum the Fears</button>
+                    <button id="btnClear" class="btn btn-dark col-2" style="border:double; margin-left:10px; margin-top:20px" double">Clear</button>
+                </div>
+                <br />
+
+                <div class="row h4 text-center" style="font-family:'Comic Sans MS'; color:snow">
+                    <p id="soafOut"></p>
+
+                </div>
+            </div>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="scripts/main.js"></script>
+            <script src="scripts/plagin-js/jquery-1.11.3.js"></script>
+            <script src="scripts/plagin-js/preloader.js"></script>
+            <script src="scripts/plagin-js/plagin.js"></script>
+            <script src="scripts/plagin-js/html5shiv.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <!-- Custom Script
+            ==========================================-->
+            <script src="scripts/custom-scripts.js"></script>
+
+            <script src="scripts/prism.js"></script>
+
+
 </body>
 
 </html>
