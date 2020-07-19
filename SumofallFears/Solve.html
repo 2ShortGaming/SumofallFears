@@ -94,6 +94,10 @@
             width: 70%;
             margin: auto;
         }
+        .bgd {
+            background-color: #171717;
+            color: snow;
+        }
     </style>
 
 </head>
@@ -101,47 +105,7 @@
 <body class="bg overlay-color-full overlay-color">
 
     <!-- Navigation -->
-    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container" style="font-family:'Comic Sans MS'; color:snow">
-            <a class="navbar-brand" href="/Index.html">Sum of all Fears</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Index.html">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/Solve.html">Try It</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Code.html">Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/2ShortGaming/SumofallFears" target="_blank">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://swaney-portfolio-cf-trn.netlify.app" target="_blank">Portfolio</a>
-                    </li>
-                </ul>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle navbar-dark bg-dark" type="button" data-toggle="dropdown" style="color:snow">
-                        Mini Projects
-                        <span class="navbar-toggler"></span>
-                    </button>
-                    <ul class="dropdown-menu navbar-dark bg-dark">
-                        <li><a href="https://swaney-tacocat.netlify.app" target="_blank" style="color:snow">TacocaT</a></li>
-                        <li><a href="https://swaney-fizzbuzz.netlify.app/" target="_blank" style="color:snow">FizzBuzz</a></li>
-                        <li><a href="https://swaney-sunsethills.netlify.app" target="_blank" style="color:snow">Sunset Hills</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>-->
+   
     <nav class="navbar navbar-fixed-top main-navbar-top navbar-top-js navbar-home" id="main-navbar-top">
         <div class="container relative">
             <div class="navbar-header">
@@ -173,31 +137,36 @@
             <!-- Right Side Navigation Button-->
             <div class="dropdown">
                 <div class="navbar-collapse-right">
-                    <ul class="nav navbar-nav ml-auto navbar-right btn-scroll">
-                        <li><a class="nav navbar-nav ml-auto navbar-right btn-nav dropdown-toggle" data-toggle="dropdown">MINI PROJECTS <i class="icon icon-arrow-right"></i></a></li>
+                    <ul class="nav navbar-nav ml-auto navbar-right btn-scroll" data-toggle="dropdown">
+                        <li><a class="nav navbar-nav ml-auto navbar-right btn-nav">MINI PROJECTS <i class="icon icon-arrow-right"></i></a></li>
 
                     </ul>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu bgd" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" style="color:snow" href="https://swaney-tacocat.netlify.app" target="_blank">TacocaT</a>
+                        <a class="dropdown-item" style="color:snow" href="https://swaney-fizzbuzz.netlify.app/" target="_blank">FizzBuzz</a>
+                        <a class="dropdown-item" style="color:snow" href="https://swaney-sunsethills.netlify.app" target="_blank">Sunset Hills</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+    <br />
+    <br />
+    <br />
+    <br />
 
             <!-- Page Content -->
             <div class="container">
                 <div class="row" style="color:snow">
                     <div class="col-lg-12 text-center">
                         <h1 class="mt-5 animate__animated animate__heartBeat animate__infinite animate__slow">Sum of all Fears Exercise</h1>
-                        <p class="lead">The Challenge</p>
+                        <p class="lead" style="color:snow">The Challenge</p>
                         <ul class="list-unstyled">
-                            <li>Please enter numbers into each box.</li>
+                            <li>Please enter numbers into each box and Sum the Fears!</li>
                         </ul>
                     </div>
                 </div>
+                <br />
                 <div class="row">
                     <input class="col form-control" id="soafK" placeholder="K Value" />
                     <input class="col form-control" id="soafIn1" style="margin-left:10px" placeholder="Enter Number" />
@@ -206,16 +175,15 @@
                     <input class="col form-control" id="soafIn4" style="margin-left:10px" placeholder="Enter Number" />
                     <input class="col form-control" id="soafIn5" style="margin-left:10px" placeholder="Enter Number" />
                 </div>
-                <div class="row" style="font-family:'Comic Sans MS'; color:snow">
-                    <div class="col-3" style="margin-left:75px"></div>
+                <div class="row" style="color:snow; padding-left:7.5em">
+                    <div class="col-2" style="margin-left:75px;"></div>
                     <button id="soafBtn" class="btn btn-dark col-2" style="border:double; margin-top:20px">Sum the Fears</button>
-                    <button id="btnClear" class="btn btn-dark col-2" style="border:double; margin-left:10px; margin-top:20px" double">Clear</button>
+                    <button id="btnClear" class="btn btn-dark col-2" style="border:double; margin-left:14px; margin-top:20px" double">Clear</button>
                 </div>
                 <br />
 
-                <div class="row h4 text-center" style="font-family:'Comic Sans MS'; color:snow">
+                <div class="row h4 text-center" style="color:snow">
                     <p id="soafOut"></p>
-
                 </div>
             </div>
 

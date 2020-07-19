@@ -38,6 +38,6 @@ $("#soafBtn").on("click", function () {
     $("#soafOut").text(message);
 });
 $("#btnClear").on("click", function () {
-    $("#soafK, #soafIn1,#soafIn2, #soafIn3, #soafIn4, #soafIn5").val("");
+    $("#soafK, #soafIn1, #soafIn2, #soafIn3, #soafIn4, #soafIn5").val("");
     $("#soafOut").text("");
 })
